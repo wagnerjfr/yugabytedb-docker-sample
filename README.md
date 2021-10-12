@@ -3,7 +3,7 @@
 We will create (locally with Docker) a [YugabyteDB](https://www.yugabyte.com/) cluster with a replication factor of 3 that allows a fault tolerance of 1.
 This means the cluster will remain available for both reads and writes even if one node fails.
 
-[YugabyteDB documantation](https://docs.yugabyte.com/latest/)
+[YugabyteDB Docs](https://docs.yugabyte.com/latest/)
 
 ### 1. Install YugabyteDB
 Pull the YugabyteDB Docker image.
@@ -67,10 +67,10 @@ a4172c593742   yugabytedb/yugabyte:latest   "bin/yugabyted start…"   19 second
 The `yb-master` Admin UI is available at [http://localhost:7000](http://localhost:7000) and the `yb-tserver` Admin UI is available at [http://localhost:9000](http://localhost:9000).
 
 ##### YB-Master status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tmaster1.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tmaster1.png)
 
 ##### YB-TServer status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tserver1.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tserver1.png)
 
 ### 6. Emulate workloads against YugabyteDB
 Run the command below and a new container `yugabyte-client` will be create:
@@ -108,7 +108,7 @@ docker logs yugabyte-client
 ```
 
 ##### YB-TServer status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tserver2.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tserver2.png)
 
 ### 7. Fault tolarence with node disconnection
 Let's disconnect one container from network and observe continuous write/ready availability
@@ -117,10 +117,10 @@ docker network disconnect universe yugabyte2
 ```
 After some seconds..
 ##### YB-Master status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tmaster2.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tmaster2.png)
 
 ##### YB-TServer status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tserver3.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tserver3.png)
 
 ### 8. Node cluster rejoins
 Reconnecting the container to the network:
@@ -129,10 +129,10 @@ docker network connect universe yugabyte2
 ```
 After some seconds..
 ##### YB-Master status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tmaster3.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tmaster3.png)
 
 ##### YB-TServer status
-![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/master/figures/tserver4.png)
+![alt text](https://github.com/wagnerjfr/yugabytedb-docker-sample/blob/main/figures/tserver4.png)
 
 ### 9. Clean up
 To clean up everything:
