@@ -5,7 +5,7 @@ This means the cluster will remain available for both reads and writes even if o
 
 [YugabyteDB Docs](https://docs.yugabyte.com/latest/)
 
-There is another repository with a 5 nodes cluster solution [here](https://github.com/wagnerjfr/yugabytedb-5-nodes-cluster-docker-sample).
+**:star: There is another repository with a 5 nodes cluster solution [here](https://github.com/wagnerjfr/yugabytedb-5-nodes-cluster-docker-sample).**
 
 ### 1. Install YugabyteDB
 Pull the YugabyteDB Docker image.
